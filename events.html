@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in JS</title>
+</head>
+<body style="background-color: #414141;">
+    <div class="images">
+        <ul>
+            <li><img id="dog1" src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9nfGVufDB8fDB8fHww" width="200px" alt="dog_1"></li>
+            <li><img id="dog2" src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZG9nfGVufDB8fDB8fHww" width="200px" alt="dog_2"></li>
+            <li><img id="dog3" src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGRvZ3xlbnwwfHwwfHx8MA%3D%3D" width="200px" alt="dog_3"></li>
+            <li><img id="dog4" src="https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGRvZ3xlbnwwfHwwfHx8MA%3D%3D" width="200px" alt="dog_4"></li>
+            <li><a id="google" href="https://www.google.com/" style="color: aqua;" target="_blank">google</a></li>
+        </ul>
+    </div>
+    
+</body>
+<script>
+    // document.getElementById('dog1').onclick = function(){
+    //     alert('dog1 clicked')
+    // }
+
+    // document.getElementById('dog2').addEventListener('click',function(e){
+        // alert('dog2 cliked')
+        // console.log(e);
+        //type , timeStamps , defaultPrevented
+        // target , toElement , srcElement , currentTarget
+        //clientX , clientY , screenX
+        //altkey , ctrlkey , shiftkey , keycode
+
+
+    // })
+
+    // document.getElementById('dog3').addEventListener('click',function(e){
+    //     alert('dog3 cliked')
+    //     e.stopPropagation()
+
+    // },false)
+
+    // document.querySelector('.images').addEventListener('click',function(e){
+    //     alert('inside li something cliked')
+    //     e.stopPropagation()
+    // },false)
+
+    // false --> bubbling up (from inside to up)
+    //true --> capturing up (from top to bottom)
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //    e.preventDefault();
+    //    // preventDefault() method stops the default behavior of any event
+        
+        
+    // })
+
+    // document.querySelector('.images').addEventListener('click',function(e){
+    //     console.log(e.target.tagName)
+    //     const removeIt = e.target.parentNode
+    //     removeIt.remove();
+
+    //     // removeIt.parentNode.removeChild(removeIt) //--2nd way
+    // })
+
+    document.querySelector('.images').addEventListener('click',function(e){
+        console.log(e.target.id);
+        if(e.target.tagName == 'IMG'){
+            const removeIt = e.target.parentNode
+            removeIt.remove();
+
+        }
+
+        // removeIt.parentNode.removeChild(removeIt) //--2nd way
+    })
+
+
+
+
+
+
+</script>
+
+
+
+
+</html>

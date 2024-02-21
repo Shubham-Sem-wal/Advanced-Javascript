@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeout functions</title>
+</head>
+<body>
+
+    <div style="background-color: aqua;padding: 20px;">
+    <h1>Timeout functions</h1>
+    <button style="color: brown;background-color: yellowgreen;" id="button">stop</button>
+</div>
+</body>
+<script>
+
+    // setTimeout( function(){
+    //     console.log('shubham');
+    // },3000)
+
+    // document.querySelector('h1').innerHTML = "shubham"
+    // let change=0;
+    // setTimeout(function(){
+    //     change = document.querySelector('h1').innerHTML = "shubham"
+
+    // },4000)
+
+    // const changed = document.querySelector('h1').innerHTML = "changed"
+
+    // const timeForChange = setTimeout(changed,4000)
+
+    const timeForChange=setTimeout( function(){
+        document.querySelector('h1').innerHTML = "changed"
+
+    },4000 )
+
+
+
+    // clearTimeout(change)
+
+    document.querySelector('button').addEventListener('click',function(){
+        clearTimeout(timeForChange)
+        console.log('stopped');
+    })
+
+
+
+</script>
+</html>

@@ -1,0 +1,6 @@
+textContent and innerText -
+
+innerText shows only those text which are visible but textContent shows all the text
+which are hide also
+
+innerHTML - this gives the html tag also along with all text inside tags

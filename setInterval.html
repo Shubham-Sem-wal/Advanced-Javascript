@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeout functions</title>
+</head>
+<body>
+
+    <div style="background-color: aqua;padding: 20px;">
+    <h1>How setInterval() works</h1>
+    <button style="background-color: blueviolet;" id="button1">start</button>
+    <button id="button2" style="color: brown;background-color: yellowgreen;">stop</button>
+    </div>
+</body>
+<script>
+
+
+
+    const myName = function(){
+        console.log("shubham",Date.now());
+    }
+
+    // const set = setInterval(myName,100)
+    // clearInterval(set)
+
+
+    let set;
+
+    document.getElementById('button1').
+    addEventListener('click',function(){
+        if(!set)
+        set = setInterval(myName,1000)
+
+    })
+
+    document.getElementById('button2').
+    addEventListener('click',function(){
+        clearInterval(set)
+        set = null;
+    })
+
+
+
+
+
+
+
+
+
+    // const interval = setInterval( function(){
+    //     console.log("hi shubham",Date.now())
+    // },2000 )
+
+    // clearInterval(interval)
+
+
+    // const setted = setInterval(function(){
+    //     console.log("shubham");
+    // },3000)
+
+    // const sayName = function(){
+    //     console.log("shubham",Date.now());
+    // }
+
+    // const set = setInterval(sayName,3000)
+
+    // clearInterval(set)
+
+    // document.getElementById('button1').
+    // addEventListener('click',function(){
+    //     const set = setInterval(sayName,1000)
+    // })
+
+    // const interval = setInterval(function(){
+    //     document.getElementById('button1').
+    //     addEventListener('click',function(){
+    //         console.log("you can bhai",Date.now());
+    //     })
+    // },1000)
+
+    // document.getElementById('button2').
+    // addEventListener('click',function(){
+    //     clearInterval(interval)
+    // })
+
+
+
+</script>
+
+
+
+</html>
